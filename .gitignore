@@ -9,5 +9,5 @@
 /Gemfile.lock
 
 /vendor/bundle
-
+/.bundle/
 
