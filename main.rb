@@ -13,7 +13,7 @@ INFO_TO_DISPLAY = %w{
 
 get '/' do
   @info = INFO_TO_DISPLAY.map do |i|
-    [i, @env[i]]
+    [i, Rack::Utils.escape_html(@env[i])]
   end
   @info = Hash[*@info.flatten]
   @info = @info.map do |k, v|
